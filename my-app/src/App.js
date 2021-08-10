@@ -1,10 +1,15 @@
 import React from 'react';
 
+//Redux LifeCycle
+//Action Creator --> Action --> Dispatch --> Reducer ---> State
 
-const Insurance ()=>{
-  return(
-    <h1>Hello World</h1>
-  )
+const App = ()=>{
+
+ return(
+   <Insurance />
+ )
 }
 
-export default Insurance;
+
+
+export default App;
