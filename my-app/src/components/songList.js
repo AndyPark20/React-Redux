@@ -9,7 +9,8 @@ class SongList extends Component{
       return(
         <div className="item" key={song.title}>
           <div className="right floated content">
-            <button className="ui button primary" onClick={()=>console.log('hello')}>
+            <button className="ui button primary"
+            onClick={()=>this.props.selectSong(song)}>
               Select
             </button>
           </div>
@@ -23,7 +24,6 @@ class SongList extends Component{
 
 
   render(){
-    console.log(this.props)
     return <div className="ui divided list">{this.renderList()}</div>
   }
 }
@@ -32,7 +32,7 @@ class SongList extends Component{
 //By convention we name the fucntion mapStatetoProps, but can name anything we want
 
 function mapStateToProps(state){
-
+console.log(state)
 //Will ALWAYS RETURN AN OBJECT --> The component will get it as a props!!!
 return {songs: state.songs};
 }
