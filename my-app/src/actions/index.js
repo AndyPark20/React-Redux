@@ -1,5 +1,14 @@
 
 
+//Create Action Creator for userSelected Songs
+
+export const selectedSong =(song)=>{
+  //Will always return an object for Action form
+  return {
+    type:'SONG_SELECTED',
+    payload:song
+  };
+};
 
 
 
