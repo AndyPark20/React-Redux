@@ -1,3 +1,5 @@
+import { combineReducers } from "redux";
+
 
 const songsReducer =()=>{
 
@@ -15,4 +17,13 @@ const selectedSongReducer=(selectedSong=null, action)=>{
     return action.payload
   }
   return selectedSong;
+
+
 }
+
+
+//This is all the combined reducer called "STORE"
+export default combineReducers({
+  songs: songsReducer,
+  selectedSong:selectedSongReducer
+})
