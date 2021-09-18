@@ -1,10 +1,12 @@
-import React from 'react';
-import actions from '../actions'
+ import React from 'react';
 
-const App =()=>{
-  return(
-    <div>App</div>
-  )
-};
 
-export default App;
+ const App =()=>{
+   return(
+     <div>
+       App
+     </div>
+   )
+ }
+
+ export default App;
