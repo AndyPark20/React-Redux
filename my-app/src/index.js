@@ -1,3 +1,37 @@
+//Main index file is going to allow the Redux and React to communicate
+import React from 'react';
+import ReactDom from 'react-dom';
+
+//Named export is going to be in the curly braces
+import {App} from './components/app';
+
+
+ReactDom.render(<App />, document.querySelector('#root'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

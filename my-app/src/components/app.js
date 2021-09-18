@@ -1,3 +1,19 @@
+//App.js is going to be the the parent component
+import React, {Component} from 'react';
+
+
+//create a class Component
+
+export class App extends Component {
+
+  render(){
+    return (
+      <div>Hello</div>
+    )
+  }
+}
+
+
 
 
 
