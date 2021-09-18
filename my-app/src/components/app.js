@@ -1,14 +1,13 @@
 //App.js is going to be the the parent component
 import React, {Component} from 'react';
-
+//Import SongList
+import SongList from './songList';
 
 //create a class Component
-
 export class App extends Component {
-
   render(){
     return (
-      <div>Hello</div>
+      <div><SongList/></div>
     )
   }
 }

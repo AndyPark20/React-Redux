@@ -24,7 +24,7 @@ const selectedSongReducer =(selectedSong =null,action)=>{
 
 //use the combinedReducer method to create an object that has all the reducer in "STORE";
 export default combineReducers({
-  songReducer:songReducer,
+  song:songReducer,
   selectedSongReducer: selectedSongReducer
 });
 

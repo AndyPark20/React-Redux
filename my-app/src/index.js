@@ -1,19 +1,19 @@
 //Main index file is going to allow the Redux and React to communicate
 import React from 'react';
 import ReactDom from 'react-dom';
-
 //Named export is going to be in the curly braces
 import { App } from './components/app';
-
 //Import createStore method from redux library
 import { createStore } from 'redux';
-
 //Import Provider component from react-reduct library
 import { Provider } from 'react-redux';
+//Import combined reducers from the reducer directory
+import reducers from './reducers';
 
 //wrap the App component inside the Provider component for Context functionality (so that props can be accessed from App componnent to child component)
+//Theoretically its the Provider component giving the App component accessability to the "Store"
 ReactDom.render(
-  <Provider store={createStore('reducer object')}>
+  <Provider store={createStore(reducers)}>
     <App />
   </Provider>
   , document.querySelector('#root'));
