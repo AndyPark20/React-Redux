@@ -3,10 +3,20 @@ import React from 'react';
 import ReactDom from 'react-dom';
 
 //Named export is going to be in the curly braces
-import {App} from './components/app';
+import { App } from './components/app';
 
+//Import createStore method from redux library
+import { createStore } from 'redux';
 
-ReactDom.render(<App />, document.querySelector('#root'));
+//Import Provider component from react-reduct library
+import { Provider } from 'react-redux';
+
+//wrap the App component inside the Provider component for Context functionality (so that props can be accessed from App componnent to child component)
+ReactDom.render(
+  <Provider store={createStore('reducer object')}>
+    <App />
+  </Provider>
+  , document.querySelector('#root'));
 
 
 

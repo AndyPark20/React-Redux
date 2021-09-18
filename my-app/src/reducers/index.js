@@ -3,7 +3,7 @@
 import { combineReducers } from "redux";
 
 
-//List of Songs
+//List of Songs (using reducer to render list of songs is an overkill)
 const songReducer = () => {
   return [
     { title: 'No Scrubs', duration: '4:05' },
@@ -21,6 +21,12 @@ const selectedSongReducer =(selectedSong =null,action)=>{
 
     return selectedSong;
 }
+
+//use the combinedReducer method to create an object that has all the reducer in "STORE";
+export default combineReducers({
+  songReducer:songReducer,
+  selectedSongReducer: selectedSongReducer
+});
 
 
 
