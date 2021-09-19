@@ -2,6 +2,7 @@
 //need to import connect method from the redux library
 import React,{Component} from 'react';
 import { connect } from 'react-redux';
+import { selectedSong} from '../actions'
 
 //create a class component
 class SongList extends Component{
@@ -10,8 +11,9 @@ class SongList extends Component{
   renderPlaylist(){
     return this.props.song.map((values,index)=>{
       return(
-        <div key={index}>{values.title}</div>
-        <button>Select</button>
+        <div key={index}>{values.title}
+          <button onClick={() => this.props.selectedSong(values.title)}>Select</button>
+        </div>
       );
     });
 
@@ -26,8 +28,10 @@ class SongList extends Component{
 };
 
 //Create a mapStateToProps function that will get the state from the "Store"
-
+//ONLY FOR STATE
+// REDUCER CAN GO DIRECTLY TO CONNECT
 function mapStateToProps(state){
+  console.log(state)
   return {
     song:state.song
   }
@@ -35,7 +39,7 @@ function mapStateToProps(state){
 
 
 //connect method of the react-redux library is going to allow the state to be updated and also reducer function to be passed as a props in the components
-export default connect(mapStateToProps)(SongList)
+export default connect(mapStateToProps, { selectedSong})(SongList)
 
 
 
