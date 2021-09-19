@@ -16,9 +16,10 @@ const songReducer = () => {
 //Current playing song or change to user Selected song
 const selectedSongReducer =(selectedSong =null,action)=>{
     if(action.type==='SONG_SELECTED'){
+      console.log('action.payload', action.payload)
       return action.payload
     }
-
+    console.log(selectedSong)
     return selectedSong;
 }
 
