@@ -31,7 +31,6 @@ class SongList extends Component{
 //ONLY FOR STATE
 // REDUCER CAN GO DIRECTLY TO CONNECT
 function mapStateToProps(state){
-  console.log(state)
   return {
     song:state.song
   }

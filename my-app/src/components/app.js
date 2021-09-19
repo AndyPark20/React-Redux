@@ -2,12 +2,16 @@
 import React, {Component} from 'react';
 //Import SongList
 import SongList from './songList';
+import SongDetail from './songDetail';
 
 //create a class Component
 export class App extends Component {
   render(){
     return (
+      <div>
       <div><SongList/></div>
+      <div><SongDetail/></div>
+      </div>
     )
   }
 }
