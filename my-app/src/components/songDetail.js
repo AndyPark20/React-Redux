@@ -18,8 +18,13 @@ const SongDetail=({currentSong})=>{
   }
   return(
     <div>
-      {currentSong.title}
+      title:{currentSong.title}
+      <br />
+      <div>
+        duration:{currentSong.duration}
     </div>
+    </div>
+
   )
 }
 
