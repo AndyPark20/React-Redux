@@ -12,7 +12,7 @@ class SongList extends Component{
     return this.props.song.map((values,index)=>{
       return(
         <div key={index}>{values.title}
-          <button onClick={() => this.props.selectedSong(values.title)}>Select</button>
+          <button onClick={() => this.props.selectedSong(values)}>Select</button>
         </div>
       );
     });
