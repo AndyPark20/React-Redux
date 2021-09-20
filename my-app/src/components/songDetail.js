@@ -7,26 +7,22 @@ import {connect} from 'react-redux';
 
 //this component will render the playlist
 
-const SongDetail=(currentSongz)=>{
+const SongDetail=({currentSong})=>{
 
+
+
+  if(!currentSong){
+    return(
+      <div>
+        Please select a song
+      </div>
+    )
+  }
   return(
     <div>
-      {console.log(currentSongz)}
+      {currentSong.title}
     </div>
   )
-  // console.log(title)
-  // if(!title){
-  //   return(
-  //     <div>
-  //       Please select a song
-  //     </div>
-  //   )
-  // }
-  // return(
-  //   <div>
-  //     {title}
-  //   </div>
-  // )
 }
 
 //This will retrieve the state
