@@ -6,12 +6,13 @@
     const Counter = (props) => {
         return (
             <div>
-                <button className="increment" onClick={()=>{increment(props.count)}}>Increment</button>
-                <button className="decrement" onClick={()=>{decrement(props.count)}}>Decrement</button>
+                <button className="increment" onClick={props.increment}>Increment</button>
+                <button className="decrement" onclick={props.decrement}>Decrement</button>
                 Current Count: <span>{props.count}</span>
             </div>
         );
     };
+
 
     const mapStateToProps =(state)=>{
         return{
@@ -19,7 +20,7 @@
         }
     }
 
-    const WrappedCounter = ReactRedux.connect(mapStateToProps(),{increment}, {decrement})(Counter);
+    const WrappedCounter = ReactRedux.connect(mapStateToProps,{increment, decrement})(Counter);
 
     // Only change code *before* me!
     // -----------
@@ -27,6 +28,7 @@
     const store = Redux.createStore(Redux.combineReducers({
         count: (count = 0, action) => {
             if (action.type === 'increment') {
+
                 return count + 1;
             } else if (action.type === 'decrement') {
                 return count - 1;
@@ -49,12 +51,12 @@
 
 
 
-<!--The App component above will be rendered into this-->
+<!--The App component above will be rendered into this-- >
 <div id="root"></div>
 
 
-<!--No need to change anything after this line!-->
-<!--No need to change anything after this line!-->
+<!--No need to change anything after this line!-- >
+< !--No need to change anything after this line!-- >
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.0.0/polyfill.min.js"></script>
 <script crossorigin src="https://unpkg.com/@babel/standalone@7.0.0/babel.min.js"></script>
 <script crossorigin src="https://unpkg.com/@babel/preset-env-standalone@7.0.0/babel-preset-env.min.js"></script>
