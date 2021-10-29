@@ -42,7 +42,7 @@ export default connect(mapStateToProps, { selectedSong})(SongList)
 
 
 //Reviewing Reacct Redux where I left off
-
+console.log('hello')
 
 
 
