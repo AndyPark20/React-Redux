@@ -1,6 +1,6 @@
 // Action Creator (creates Action which is just a plain Js object)
 
-const selectSong =(song)=>{
+export const selectSong =(song)=>{
   //return an action
   return{
     type:'SONG_SELECTED',
