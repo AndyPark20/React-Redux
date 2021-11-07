@@ -29,7 +29,6 @@ import './songList.css';
 
 
 const mapStateToProps=(state)=>{
-  console.log(state)
   return{songs:state.songs};
 
 }
