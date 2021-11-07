@@ -10,4 +10,9 @@ import {connect} from 'react-redux'
 }
 
 
-export ddfault
+const mapStateToProps=(state)=>{
+
+  return state;
+}
+
+export default connect(mapStateToProps)(SongList);
