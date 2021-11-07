@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {selectSong} from '../actions/index'
 
 import './songList.css';
 
@@ -10,7 +11,9 @@ import './songList.css';
       return (
         <div key={index} className="align">
           <div>{song.title}</div>
-          <button className="button">Select</button>
+          <button
+          onClick={()=>this.props.selectSong(song)}
+          className="button">Select</button>
         </div>
       );
     })
@@ -18,7 +21,6 @@ import './songList.css';
 
 
   render(){
-    console.log(this.props.songs)
     return(
       <div>{this.renderList()}</div>
     )
@@ -27,8 +29,9 @@ import './songList.css';
 
 
 const mapStateToProps=(state)=>{
+  console.log(state)
   return{songs:state.songs};
 
 }
 
-export default connect(mapStateToProps)(SongList);
+export default connect(mapStateToProps,{selectSong})(SongList);
