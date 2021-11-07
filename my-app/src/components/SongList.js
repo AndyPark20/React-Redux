@@ -21,9 +21,11 @@ import './songList.css';
 
 
   render(){
-    return(
-      <div>{this.renderList()}</div>
-    )
+    return (
+      <div>
+        {this.renderList()}
+      </div>
+    );
   }
 }
 
