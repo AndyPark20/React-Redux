@@ -24,7 +24,7 @@
 // })
 
 
-import {combineReducers} from 'react-redux';
+import {combineReducers} from 'redux';
 
 
 //create a reducer that has the state object
