@@ -31,6 +31,7 @@
 
 
 // const mapStateToProps=(state)=>{
+//   console.log(state)
 //   return{songs:state.songs};
 
 // }
@@ -43,28 +44,28 @@ import './songList.css';
 import {selectSong} from '../actions'
 
 
-const SongList =(props)=>{
+const SongList =({songs,selectSong})=>{
 
-  const renderSongList =()=>{
+  const renderList =()=>{
 
-    return props.song.map((values,index)=>{
-      return(
-        <div key={index} className='align'>
-          <div>{values.track}</div>
-          <button onClick={()=>selectSong(values)}>Select Song</button>
+    return songs.map((song,index)=>{
+      return (
+        <div key={index} className="align">
+          <div>{song.track}</div>
+          <button onClick={() => selectSong(song)}>SELECT</button>
         </div>
-      )
+      );
     })
   }
 
 return(
-  <div>{renderSongList()}</div>
+  <div>{renderList()}</div>
 )
 }
 
 const mapStateToProps =(state)=>{
   console.log(state)
-  return {song:state.songs}
+  return {songs:state.songs}
 }
 
 //use the connect function to communicate with the Provider component to retrieve or update state with reducers

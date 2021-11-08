@@ -25,26 +25,27 @@
 
 
 import {combineReducers} from 'redux';
+
 //create a reducer that has the state object
 
-const songList =()=>{
+const songReducer = () => {
   return [
     { track: "Austin Texas Circuit", duration: "1hr and 30mins" },
     { track: "Ciuidad Mexico Circuit", duration: "2hr and 50mins" },
     { track: "Abu Dabi", duration: "3hr and 35mins" },
   ];
-}
+};
 
 
-const songReducer =(currentSong =null, action)=>{
-  if(action.type ==='SONG_SELECTED'){
-    return action.payload
+const selectedSongReducer = (currentSong = null, action) => {
+  if (action.type === "SONG_SELECTED") {
+    return action.payload;
   }
-  return currentSong
-}
+  return currentSong;
+};
 
 
 export default combineReducers({
-  songs:songList,
-  songReducer:songReducer
+    songs: songReducer,
+    selectedSong: selectedSongReducer
 });
