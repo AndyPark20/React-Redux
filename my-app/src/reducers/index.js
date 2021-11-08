@@ -22,3 +22,31 @@
 //   songs: songReducer,
 //   selectedSong: selectedSongReducer
 // })
+
+
+import {combineReducers} from 'react-redux';
+
+
+//create a reducer that has the state object
+
+const songList =()=>{
+  return [
+    { track: "Austin Texas Circuit", duration: "1hr and 30mins" },
+    { track: "Ciuidad Mexico Circuit", duration: "2hr and 50mins" },
+    { track: "Abu Dabi", duration: "3hr and 35mins" },
+  ];
+}
+
+
+const songReducer =(currentSong =null, action)=>{
+  if(action.payload ==='SONG_SELECTED'){
+    return action.payload.track
+  }
+  return currentSong
+}
+
+
+export default combineReducers({
+  songs:songList,
+  songReducer:songReducer
+});
