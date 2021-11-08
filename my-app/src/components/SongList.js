@@ -40,18 +40,18 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import './songList.css';
-import action from '../actions'
+import {selectSong} from '../actions'
 
 
 const SongList =(props)=>{
 
   const renderSongList =()=>{
 
-    return props.songs.map((values,index)=>{
+    return props.song.map((values,index)=>{
       return(
         <div key={index} className='align'>
           <div>{values.track}</div>
-          <button>Select Song</button>
+          <button onClick={()=>selectSong(values)}>SELECT</button>
         </div>
       )
     })
@@ -63,8 +63,9 @@ return(
 }
 
 const mapStateToProps =(state)=>{
-  return state;
+  console.log(state)
+  return {song:state.songs}
 }
 
 //use the connect function to communicate with the Provider component to retrieve or update state with reducers
-export default connect(mapStateToProps,{action})(SongList)
+export default connect(mapStateToProps,{selectSong})(SongList)
