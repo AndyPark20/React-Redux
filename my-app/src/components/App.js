@@ -6,11 +6,12 @@
 // export const App = () => {
 //   return(
 //     <div>
-//       <SongDetail/>
+//       {/* <SongDetail/> */}
 //       <SongList />
 //     </div>
 //   );
 // };
+
 import React from 'react';
 import SongList from './SongList';
 

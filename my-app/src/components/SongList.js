@@ -51,7 +51,7 @@ const SongList =(props)=>{
       return(
         <div key={index} className='align'>
           <div>{values.track}</div>
-          <button onClick={()=>selectSong(values)}>SELECT</button>
+          <button onClick={()=>selectSong(values)}>Select Song</button>
         </div>
       )
     })

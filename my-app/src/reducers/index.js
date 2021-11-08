@@ -25,8 +25,6 @@
 
 
 import {combineReducers} from 'redux';
-
-
 //create a reducer that has the state object
 
 const songList =()=>{
@@ -39,8 +37,8 @@ const songList =()=>{
 
 
 const songReducer =(currentSong =null, action)=>{
-  if(action.payload ==='SONG_SELECTED'){
-    return action.payload.track
+  if(action.type ==='SONG_SELECTED'){
+    return action.payload
   }
   return currentSong
 }
