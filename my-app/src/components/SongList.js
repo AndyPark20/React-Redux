@@ -37,6 +37,34 @@
 
 // export default connect(mapStateToProps,{selectSong})(SongList);
 
-
-
 import React from 'react';
+import {connect} from 'react-redux';
+import './songList.css';
+import action from '../actions'
+
+
+const SongList =(props)=>{
+
+  const renderSongList =()=>{
+
+    return props.songs.map((values,index)=>{
+      return(
+        <div key={index} className='align'>
+          <div>{values.track}</div>
+          <button>Select Song</button>
+        </div>
+      )
+    })
+  }
+
+return(
+  <div>{renderSongList()}</div>
+)
+}
+
+const mapStateToProps =(state)=>{
+  return state;
+}
+
+//use the connect function to communicate with the Provider component to retrieve or update state with reducers
+export default connect(mapStateToProps,{action})(SongList)
