@@ -6,4 +6,7 @@ import { combineReducers } from "redux";
 
 
 
-export default combineReducers({});
+export default combineReducers({
+  //Put dummy variable
+  replaceMe:()=>10
+});
