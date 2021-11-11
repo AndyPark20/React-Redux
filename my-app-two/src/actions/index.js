@@ -1,9 +1,10 @@
 import {api} from '../apis/jsonPlaceholder'
 
 export const fetchPosts = ()=>{
-  const result =   api();
-  console.log(result)
-  return{
-    type:'FETCH_POSTS'
-  };
+  return async function(dispatch,getState){
+      const result = await api();
+
+
+  }
+
 };
