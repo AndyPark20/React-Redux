@@ -1,11 +1,5 @@
 
-
-export const api = async()=>{
-  try{
-    const fetchData = await fetch("https://jsonplaceholder.typicode.com/");
-    const dataResult = await fetchData.json();
-    return dataResult;
-  }catch(err){
-    console.error(err)
-  }
-}
+import axios from "axios";
+export default axios.create({
+  baseURL: "https://jsonplaceholder.typicode.com",
+});
