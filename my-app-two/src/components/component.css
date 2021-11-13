@@ -1,0 +1,12 @@
+.details{
+  display:flex;
+  align-items: center;
+}
+
+.fa-id-card{
+  font-size:2rem;
+}
+
+.card-container{
+  border-bottom:1px solid black;
+}
