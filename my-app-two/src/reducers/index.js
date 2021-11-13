@@ -1,7 +1,7 @@
 //No need for importing react because this is just a function
 
 import { combineReducers } from "redux";
-import postReducer from "./postReducer";
+import {postReducer} from "./postReducer";
 
 
 
