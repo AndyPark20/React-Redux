@@ -38,7 +38,7 @@ export const fetchUser =id=>async dispatch=>{
 
 
 
-
+//Note=================================
 // //You can only fetch this one time!
 // const _fetchUSer = _.memoize(async (id, dispatch)=>{
 //     const response = await jsonPlaceHolder.get(`/users/${id}`);
