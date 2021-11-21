@@ -7,7 +7,7 @@ const pageOne =()=>{
   )
 }
 
-const PageTwo =()=>{
+const pageTwo =()=>{
   return(
     <div>PageTwo</div>
   )
@@ -18,7 +18,7 @@ const App =()=>{
     <BrowserRouter>
       <div>
         <Route path="/" exact component={pageOne}></Route>
-        <Route path="/pageTwo"
+        <Route path="/pageTwo" component={pageTwo}></Route>
       </div>
     </BrowserRouter>
   )
