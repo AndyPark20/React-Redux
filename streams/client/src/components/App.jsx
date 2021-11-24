@@ -33,3 +33,8 @@ export default App;
 //Working on OAuth
   //Different from Traditional Authentication where you store credentials on DB and match with email and password
   //OAuth uses outside servers like FB and LinkedIn to validate credentials.
+
+
+//OAuth for Servers vs OAuth for Js Browser Apps
+  //difference is that Servers will access user data when they are not logged in
+  //While Js Browser Apps will only access user data while they are logged in.
