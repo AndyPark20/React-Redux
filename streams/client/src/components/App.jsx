@@ -29,3 +29,7 @@ const App = () => {
 };
 
 export default App;
+
+//Working on OAuth
+  //Different from Traditional Authentication where you store credentials on DB and match with email and password
+  //OAuth uses outside servers like FB and LinkedIn to validate credentials.
