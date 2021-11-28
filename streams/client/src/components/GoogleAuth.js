@@ -2,7 +2,11 @@ import React from 'react';
 
 
 class GoogleAuth extends React.Component{
-  state ={isSignedIn:null};
+  constructor(props){
+    super(props);
+    this.state = {isSignedIn:null}
+  }
+
 
   componentDidMount(){
     window.gapi.load('client:auth2',()=>{
@@ -12,6 +16,7 @@ class GoogleAuth extends React.Component{
           scope:'email'
       }).then(()=>{
         this.auth = window.gapi.auth2.getAuthInstance();
+        console.log('this.auth', this.auth.isSignedIn)
         this.setState({isSignedIn:this.auth.isSignedIn.get()});
         console.log(this.state.isSignedIn)
       });
