@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "../components/GoogleAuth.css";
 
 
 class GoogleAuth extends React.Component {
