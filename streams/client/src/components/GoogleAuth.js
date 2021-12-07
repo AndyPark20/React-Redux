@@ -1,6 +1,7 @@
 import React from 'react';
 
 
+
 class GoogleAuth extends React.Component {
   constructor(props) {
     super(props);
@@ -37,7 +38,11 @@ class GoogleAuth extends React.Component {
         </button>
       );
     } else {
-      return <div>I am not signed in</div>;
+      return(
+        <button className="ui red google button">
+          <i className="google icon" >Sign in With Google</i>
+        </button>
+      )
     }
   }
 
