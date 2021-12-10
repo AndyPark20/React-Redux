@@ -30,9 +30,9 @@ class GoogleAuth extends React.Component {
 
   onAuthChange = (isSignedIn) => {
     if(isSignedIn){
-      this.props.signIn();
+      this.props.signIn(isSignedIn);
     }else{
-      this.props.signOut();
+      this.props.signOut(isSignedIn);
     }
   };
 
@@ -68,6 +68,10 @@ class GoogleAuth extends React.Component {
   }
 }
 
-export default connect(null,{signIn,signOut}) (GoogleAuth);
+const mapStateToProps =(state)=>{
+  console.log(state)
+}
+
+export default connect(mapStateToProps,{signIn,signOut}) (GoogleAuth);
 
 //Review code for gapi
