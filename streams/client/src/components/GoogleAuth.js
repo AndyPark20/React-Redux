@@ -1,5 +1,7 @@
 import React from 'react';
 import "../components/GoogleAuth.css";
+import {signIn, signOut} from '../actions'
+import { connect } from 'react-redux';
 
 
 class GoogleAuth extends React.Component {
@@ -62,6 +64,6 @@ class GoogleAuth extends React.Component {
   }
 }
 
-export default GoogleAuth;
+export default connect(null,{signIn,signOut}) (GoogleAuth);
 
 //Review code for gapi
