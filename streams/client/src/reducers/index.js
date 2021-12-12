@@ -2,18 +2,16 @@ import { combineReducers } from "redux";
 
 
 const signedInOrOutFunction =(status =null, action)=>{
-  console.log(action.type)
-  // if(action.type ==='SIGN_OUT'){
-  //   return action.payload;
-  // }
-  // return status;
+
   switch(action.type){
     case 'SIGN_OUT':
-      console.log('signedOUT!');
+      return action.payload;
+    case 'SIGN_IN':
+      return action.payload;
       default:
-        console.log('nothing found!')
+        return status;
   }
-  return status;
+
 }
 
 
