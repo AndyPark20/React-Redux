@@ -2,6 +2,7 @@ import { combineReducers } from "redux";
 
 
 const signedInOrOutFunction =(status =null, action)=>{
+  console.log(action)
   if(action.type ==='SIGN_OUT'){
     return action.payload;
   }
