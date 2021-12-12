@@ -1,5 +1,6 @@
 
 export const signIn =(status)=>{
+  console.log(status)
   return {
     type:'SIGN_IN',
     payload:status
