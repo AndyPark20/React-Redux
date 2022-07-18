@@ -64,6 +64,7 @@ return(
 }
 
 const mapStateToProps =(state)=>{
+  console.log('songs', state)
   return {songs:state.songs}
 }
 
